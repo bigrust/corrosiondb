@@ -1,0 +1,6 @@
+[package]
+name = "corrosiondb"
+version = "0.1.0"
+authors = ["Alberto Fernández <albertofem@gmail.com>", "Guillem Nieto <gnieto.talo@gmail.com>"]
+
+[dependencies]
