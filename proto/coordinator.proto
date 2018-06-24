@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package helloworld;
+
+service Coordinator {
+  rpc Ping (PingRequest) returns (PingReply) {}
+}
+
+message PingRequest {
+  string payload = 1;
+}
+
+message PingReply {
+  string payload = 1;
+}
