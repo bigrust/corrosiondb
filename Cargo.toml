@@ -4,3 +4,13 @@ version = "0.1.0"
 authors = ["Alberto Fernández <albertofem@gmail.com>", "Guillem Nieto <gnieto.talo@gmail.com>"]
 
 [dependencies]
+grpc = "~0.5"
+protobuf = "~2"
+futures = "~0.1"
+futures-cpupool = "~0.1"
+tls-api = "~0.1"
+
+rustyline = "~1.0"
+
+[build-dependencies]
+protoc-rust-grpc = "*"
