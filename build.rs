@@ -1,11 +1,14 @@
-extern crate protoc_rust_grpc;
+extern crate protoc_rust;
+
+use protoc_rust::Customize;
 
 fn main() {
-    protoc_rust_grpc::run(protoc_rust_grpc::Args {
+    protoc_rust::run(protoc_rust::Args {
         out_dir: "src/io/",
         includes: &[],
         input: &["proto/coordinator.proto"],
-        rust_protobuf: true,
-        ..Default::default()
-    }).expect("protoc-rust-grpc");
+        customize: Customize {
+            ..Default::default()
+        },
+    }).expect("Failed to compile proto files");
 }

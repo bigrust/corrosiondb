@@ -1,5 +1,10 @@
-before_install:
-  - sudo apt-get install -y protobuf
+cache:
+  directories:
+  - $HOME/protobuf
+
+install:
+  - ./ci/.travis-install.sh
+  - export PATH=.:$HOME/local/bin:$PATH
 
 language: rust
 rust:

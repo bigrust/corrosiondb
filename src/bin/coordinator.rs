@@ -23,10 +23,13 @@ fn main() {
     let port = 24322;
 
     let mut server = grpc::ServerBuilder::new_plain();
+
     server.http.set_port(port);
-    server.add_service(CoordinatorServer::new_service_def(CoordinatorImpl));
     server.http.set_cpu_pool_threads(4);
-    let _server = server.build().expect("could not build server");
+
+    server.add_service(CoordinatorServer::new_service_def(CoordinatorImpl));
+
+    let _server = server.build().expect("Could not build server");
     
     println!("Server started");
 
