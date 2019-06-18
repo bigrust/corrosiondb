@@ -2,7 +2,7 @@ cache:
   directories:
   - $HOME/protobuf
 
-install:
+before_install:
   - ./ci/install-protobuf.sh
   - export PATH=.:$HOME/local/bin:$PATH
 
