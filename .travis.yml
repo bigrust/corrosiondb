@@ -3,7 +3,7 @@ cache:
   - $HOME/protobuf
 
 install:
-  - ./ci/.travis-install.sh
+  - ./ci/install-protobuf.sh
   - export PATH=.:$HOME/local/bin:$PATH
 
 language: rust
