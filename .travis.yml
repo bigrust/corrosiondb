@@ -1,0 +1,12 @@
+cache:
+  directories:
+  - $HOME/protobuf
+
+before_install:
+  - ./ci/install-protobuf.sh
+  - export PATH=.:$HOME/local/bin:$PATH
+
+language: rust
+rust:
+  - nightly
+  - stable

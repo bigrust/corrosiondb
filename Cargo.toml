@@ -13,4 +13,4 @@ tls-api = "~0.1"
 rustyline = "~1.0"
 
 [build-dependencies]
-protoc-rust-grpc = "*"
+protoc-rust = "2.6.2"
